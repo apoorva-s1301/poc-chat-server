@@ -12,7 +12,7 @@ const io = socket(server, {
     methods: ["GET", "POST"],
   },
 });
-const PORT = 8000;
+const PORT = process.env.PORT | 8000;
 const peerServer = ExpressPeerServer(server, {
   debug: true,
 });
